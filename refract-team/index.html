@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#111010" />
+<title>The People — Refract Ventures</title>
+<meta name="description" content="The people behind Refract Ventures. Family-run. Direct lines. The humans you'll talk to when something needs attention." />
+
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="name">Refract Ventures</span>
+    </a>
+    <nav class="nav-links">
+      <a href="/#properties">Properties</a>
+      <a href="/#region">The Holdings</a>
+      <a href="index.html" class="active">The People</a>
+      <a href="/#footer">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <span class="label">The People</span>
+    <h1 style="margin-top:24px;">Family-run.<br/><em>Direct lines.</em></h1>
+    <p class="sub">
+      No management company. No call center. When you message a property,
+      the reply comes from someone whose name is on this page — usually within
+      a few hours. Here's who you're talking to.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <!-- Kids first — the people running the day-to-day -->
+    <div class="team-grid">
+      <a href="jordan.html" class="person-card jordan reveal">
+        <div class="portrait"><span class="initials">JT</span></div>
+        <div class="info">
+          <div class="role">Head of Operations</div>
+          <div class="name">Jordan <em>Tomblin</em></div>
+          <p class="blurb">If you message a property, this is the person replying. Runs the day-to-day, handles guest messages, knows where every key is.</p>
+          <span class="meet">Meet Jordan →</span>
+        </div>
+      </a>
+
+      <a href="jacey.html" class="person-card jacey reveal">
+        <div class="portrait"><span class="initials">JT</span></div>
+        <div class="info">
+          <div class="role">Head of Housekeeping &amp; AI</div>
+          <div class="name">Jacey <em>Tomblin</em></div>
+          <p class="blurb">Built the housekeeping system from scratch. If the bathroom smells right at check-in, that's her. Currently teaching herself AI tools.</p>
+          <span class="meet">Meet Jacey →</span>
+        </div>
+      </a>
+
+      <a href="cash.html" class="person-card cash reveal">
+        <div class="portrait"><span class="initials">CM</span></div>
+        <div class="info">
+          <div class="role">Head of Safety &amp; Maintenance</div>
+          <div class="name">Cash <em>Mulligan</em></div>
+          <p class="blurb">Inspections, locks, Tesla wall connectors, the fence at Little Sugar. If something needs to actually work, Cash makes it work.</p>
+          <span class="meet">Meet Cash →</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Founders below — the parents who started it -->
+    <span class="label team-section-label">The Founders</span>
+    <div class="founders-grid">
+      <a href="cody.html" class="person-card cody reveal">
+        <div class="portrait"><span class="initials">CT</span></div>
+        <div class="info">
+          <div class="role">Founder · Acquisitions &amp; Construction</div>
+          <div class="name">Cody <em>Tomblin</em></div>
+          <p class="blurb">Bought the first parcel in 2015. The hands behind every Refract build — quiet, methodical, allergic to shortcuts.</p>
+          <span class="meet">Meet Cody →</span>
+        </div>
+      </a>
+
+      <a href="ashley.html" class="person-card ashley reveal">
+        <div class="portrait"><span class="initials">AT</span></div>
+        <div class="info">
+          <div class="role">Founder · Design &amp; Hospitality</div>
+          <div class="name">Ashley <em>Tomblin</em></div>
+          <p class="blurb">Named the company. Designed every property's identity. The reason Refract feels coherent across four very different holdings.</p>
+          <span class="meet">Meet Ashley →</span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section style="padding: 100px 0 130px; border-top: 1px solid var(--border);">
+  <div class="container" style="text-align:center;">
+    <span class="label" style="display:inline-block;margin-bottom:22px;">Need to reach a real person?</span>
+    <p style="font-family:'Cormorant Garamond', serif; font-size:clamp(2rem, 4.5vw, 3.4rem); line-height:1.15; color:var(--text); margin-bottom:30px; max-width:22ch; margin-left:auto; margin-right:auto;">
+      Call <span class="italic" style="color:var(--text-2)">479.222.0117</span> or message the property directly.
+    </p>
+    <p style="color:var(--text-3); max-width:50ch; margin: 0 auto; font-size:0.96rem;">
+      You'll get one of us. Usually within a few hours, always within a day.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container foot-inner">
+    <div>Refract Ventures<br/><span class="tag">Same hands. Different light.</span></div>
+    <div style="text-align:right"><a href="https://refractventures.co">refractventures.co</a><br/><a href="tel:4792220117">479.222.0117</a> · <a href="mailto:jordan@refractventures.co">jordan@refractventures.co</a></div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+</script>
+
+</body>
+</html>

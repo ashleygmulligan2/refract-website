@@ -1,0 +1,77 @@
+{
+  "$schema": "./tools/brand.config.schema.json",
+  "slug": "refract-ventures",
+  "brand": {
+    "name": "Refract Ventures",
+    "shortName": "Refract",
+    "tagline": "Same hands. Different light.",
+    "url": "refractventures.co",
+    "region": "Northwest Arkansas",
+    "contact": "ashley@refractventures.co"
+  },
+  "type": {
+    "headline": "Cormorant Garamond",
+    "body": "Inter"
+  },
+  "colors": {
+    "bg": "#111010",
+    "frame": "#ffffff",
+    "text": "#e8e4df",
+    "muted": "#a8a39e",
+    "neutrals": [
+      { "name": "Carbon",   "hex": "#111010", "role": "Background · base" },
+      { "name": "Coal",     "hex": "#1a1918", "role": "Elevated surface" },
+      { "name": "Ash",      "hex": "#1e1d1c", "role": "Elevated surface 2" },
+      { "name": "Graphite", "hex": "#252423", "role": "Elevated surface 3" },
+      { "name": "Bone",     "hex": "#e8e4df", "role": "Primary text · paper" },
+      { "name": "Mist",     "hex": "#a8a39e", "role": "Secondary text" },
+      { "name": "Slate",    "hex": "#8a8580", "role": "Tertiary text" },
+      { "name": "Stone",    "hex": "#6f6c68", "role": "Meta · faint" },
+      { "name": "Granite",  "hex": "#5a5754", "role": "Quiet · disabled" }
+    ],
+    "accents": [
+      { "name": "Cardinal", "hex": "#d9465f", "role": "Primary highlight" },
+      { "name": "Saffron",  "hex": "#faaf40", "role": "Warmth" },
+      { "name": "Sky",      "hex": "#45abdd", "role": "Cool" },
+      { "name": "Meadow",   "hex": "#a4ce4a", "role": "Grow" }
+    ]
+  },
+  "social": {
+    "quote": {
+      "line1": "Built piece by piece,",
+      "line2": "on weekends.",
+      "footer": "REFRACT VENTURES · NORTHWEST ARKANSAS"
+    },
+    "story": {
+      "line1": "Same hands.",
+      "line2": "Different light.",
+      "handle": "REFRACTVENTURES.CO"
+    }
+  },
+  "copy": {
+    "Announcements": [
+      "Now booking — Little Sugar, the creekside bungalow at the south end of the trail.",
+      "Two suites, one craftsman. The Balcony and The Front Porch are open for fall.",
+      "Gameday weekend takes both suites at once — walk to the stadium, sleep in the Putnam District.",
+      "New parcel, same hands. More on this one soon."
+    ],
+    "Captions": [
+      "Coffee on the balcony, trailhead three minutes out. Bella Vista in early light.",
+      "The kind of porch you lose an afternoon on.",
+      "Built piece by piece, on weekends, since 2015.",
+      "Tesla charging at every property. Trail access at most."
+    ],
+    "About / bio": [
+      "A family operation across Northwest Arkansas — short-term rentals, long-term residences, and land.",
+      "No management company. No call center. You talk to the people who own the place.",
+      "Same hands. Different light.",
+      "We live here. We answer messages ourselves."
+    ],
+    "Gentle calls to action": [
+      "Message us — one of us will answer, usually the same day.",
+      "Dates are open. The link is in the bio.",
+      "Come see it in person. We will leave the lights on.",
+      "Leaf season on the Little Sugar trail. Book the bungalow before it turns."
+    ]
+  }
+}

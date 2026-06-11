@@ -1,0 +1,425 @@
+/* ============================================================
+   Refract Ventures · Team pages
+   Designed to match refractventures.co
+   ============================================================ */
+:root {
+  --bg: #111010;
+  --bg-elev: #1a1918;
+  --bg-elev-2: #1e1d1c;
+
+  --text: #e8e4df;
+  --text-2: #a8a39e;
+  --text-3: #8a8580;
+  --text-4: #6f6c68;
+  --text-5: #5a5754;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  --c-cardinal: #d9465f;
+  --c-saffron: #faaf40;
+  --c-sky: #45abdd;
+  --c-meadow: #a4ce4a;
+
+  --maxw: 1180px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", -apple-system, "system-ui", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; transition: color 200ms var(--ease); }
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 48px; }
+@media (max-width: 720px) { .container { padding: 0 24px; } }
+
+.serif { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 400; letter-spacing: 0.005em; }
+.italic { font-style: italic; }
+.label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-5);
+}
+
+/* ---------- Nav (matches refractventures.co) ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(17, 16, 16, 0.78);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 48px;
+  max-width: var(--maxw); margin: 0 auto;
+}
+@media (max-width: 720px) { .nav-inner { padding: 18px 24px; } }
+.nav-brand { display: inline-flex; align-items: center; gap: 14px; color: var(--text); }
+.nav-brand .mark {
+  width: 30px; height: 24px;
+  background-image: url("assets/logo-mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.nav-brand .name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+}
+.nav-brand .name em { font-style: italic; color: var(--text-3); font-size: 0.95rem; }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a { font-size: 0.92rem; color: var(--text-2); }
+.nav-links a:hover, .nav-links a.active { color: var(--text); }
+@media (max-width: 720px) { .nav-links { gap: 16px; } .nav-links a { font-size: 0.82rem; } }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 130px 0 110px;
+  border-bottom: 1px solid var(--border);
+}
+.hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.hero .eyebrow::before {
+  content: "";
+  width: 28px; height: 1px;
+  background: var(--text-5);
+}
+.hero h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.6rem, 6vw, 5.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.005em;
+  max-width: 18ch;
+}
+.hero h1 em { font-style: italic; color: var(--text-2); }
+.hero .sub {
+  margin-top: 32px;
+  color: var(--text-2);
+  max-width: 60ch;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* ---------- Team grid (overview page) ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 100px 0;
+}
+.person-card {
+  display: block;
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  border-radius: 4px;
+  padding: 0;
+  overflow: hidden;
+  transition: border-color 240ms var(--ease), transform 240ms var(--ease);
+  color: inherit;
+}
+.person-card:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+.person-card .portrait {
+  aspect-ratio: 4 / 5;
+  background: var(--portrait-bg, var(--bg-elev-2));
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.person-card .initials {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(5rem, 12vw, 9rem);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.14);
+  letter-spacing: -0.04em;
+  margin-bottom: 30px;
+  user-select: none;
+}
+.person-card.jordan { --portrait-bg: linear-gradient(160deg, rgba(217, 70, 95, 0.18), #1a1918 60%); }
+.person-card.jacey  { --portrait-bg: linear-gradient(160deg, rgba(250, 175, 64, 0.16), #1a1918 60%); }
+.person-card.cash   { --portrait-bg: linear-gradient(160deg, rgba(69, 171, 221, 0.16), #1a1918 60%); }
+.person-card.cody   { --portrait-bg: linear-gradient(160deg, rgba(164, 206, 74, 0.12), #1a1918 60%); }
+.person-card.ashley { --portrait-bg: linear-gradient(160deg, rgba(232, 228, 223, 0.07), #1a1918 60%); }
+
+.person-card .info {
+  padding: 28px 32px 30px;
+  border-top: 1px solid var(--border);
+}
+.person-card .role {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: 10px;
+}
+.person-card .name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.person-card .name em { font-style: italic; color: var(--text-2); }
+.person-card .blurb {
+  color: var(--text-3);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.person-card .meet {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.person-card:hover .meet { color: var(--text); }
+
+@media (max-width: 1000px) { .team-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 720px)  { .team-grid { grid-template-columns: 1fr; padding: 70px 0; } }
+
+/* ---------- Bio page ---------- */
+.bio-hero {
+  padding: 90px 0 70px;
+  border-bottom: 1px solid var(--border);
+}
+.bio-hero .back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 36px;
+}
+.bio-hero .back:hover { color: var(--text); }
+.bio-hero .role {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-color, var(--text-3));
+  margin-bottom: 22px;
+}
+.bio-hero h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(3.2rem, 7vw, 6.4rem);
+  line-height: 1;
+  letter-spacing: -0.005em;
+  color: var(--text);
+  margin-bottom: 18px;
+}
+.bio-hero h1 em { font-style: italic; color: var(--text-2); }
+.bio-hero .tagline {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  color: var(--text-2);
+  max-width: 50ch;
+  line-height: 1.35;
+}
+
+.bio-body {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border);
+}
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  align-items: start;
+}
+.bio-grid .portrait {
+  aspect-ratio: 3 / 4;
+  background: var(--portrait-bg, var(--bg-elev-2));
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.bio-grid .portrait .initials {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(7rem, 16vw, 12rem);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.12);
+  letter-spacing: -0.04em;
+  margin-bottom: 36px;
+}
+.bio-grid .text p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  margin-bottom: 22px;
+  max-width: 62ch;
+}
+.bio-grid .text p:first-of-type::first-line { color: var(--text); }
+.bio-grid .text p strong { color: var(--text); font-weight: 500; }
+@media (max-width: 900px) {
+  .bio-grid { grid-template-columns: 1fr; gap: 40px; }
+  .bio-body { padding: 50px 0; }
+  .bio-grid .portrait { max-width: 320px; }
+}
+
+/* Sidebar facts */
+.facts {
+  padding: 60px 0 100px;
+}
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.fact {
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  border-radius: 4px;
+  padding: 26px 28px 28px;
+}
+.fact .label { margin-bottom: 12px; }
+.fact .value {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: var(--text);
+}
+.fact .value em { font-style: italic; color: var(--text-2); }
+.fact .sub-value {
+  margin-top: 6px;
+  font-size: 0.86rem;
+  color: var(--text-3);
+}
+@media (max-width: 800px) { .facts-grid { grid-template-columns: 1fr; } }
+
+/* Next-up section */
+.next-up {
+  padding: 80px 0 100px;
+  border-top: 1px solid var(--border);
+}
+.next-up .label { display: block; margin-bottom: 26px; }
+.next-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.next-link {
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  border-radius: 4px;
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: border-color 240ms var(--ease);
+}
+.next-link:hover { border-color: var(--border-strong); }
+.next-link .who {
+  display: flex; flex-direction: column;
+}
+.next-link .who .role {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-4);
+  margin-bottom: 6px;
+}
+.next-link .who .name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.7rem;
+  color: var(--text);
+  line-height: 1;
+}
+.next-link .who .name em { font-style: italic; color: var(--text-2); }
+.next-link .arrow {
+  color: var(--text-3);
+  font-size: 1.4rem;
+  transition: transform 200ms var(--ease), color 200ms var(--ease);
+}
+.next-link:hover .arrow { transform: translateX(4px); color: var(--text); }
+@media (max-width: 700px) { .next-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 50px 0 60px;
+  color: var(--text-4);
+  font-size: 0.86rem;
+}
+footer .foot-inner {
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px;
+}
+footer a { color: var(--text-3); }
+footer a:hover { color: var(--text); }
+footer .tag {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  color: var(--text-2);
+  font-size: 1rem;
+}
+
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 700ms var(--ease), transform 700ms var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* Color tokens per person on bio pages */
+.theme-jordan { --accent-color: var(--c-cardinal); --portrait-bg: linear-gradient(160deg, rgba(217, 70, 95, 0.20), #1a1918 60%); }
+.theme-jacey  { --accent-color: var(--c-saffron);  --portrait-bg: linear-gradient(160deg, rgba(250, 175, 64, 0.18), #1a1918 60%); }
+.theme-cash   { --accent-color: var(--c-sky);      --portrait-bg: linear-gradient(160deg, rgba(69, 171, 221, 0.18), #1a1918 60%); }
+/* Parents get quieter warm-neutral treatment so kids stay highlighted */
+.theme-cody   { --accent-color: var(--c-meadow);   --portrait-bg: linear-gradient(160deg, rgba(164, 206, 74, 0.12), #1a1918 60%); }
+.theme-ashley { --accent-color: var(--text-2);     --portrait-bg: linear-gradient(160deg, rgba(232, 228, 223, 0.07), #1a1918 60%); }
+
+/* 4-card next-grid (2x2 on wide, 1col on mobile) */
+.next-grid { grid-template-columns: 1fr 1fr; }
+
+/* Founders-section styling (quieter than kids) */
+.team-section-label {
+  display: block;
+  text-align: center;
+  margin: 60px 0 36px;
+  padding-top: 60px;
+  border-top: 1px solid var(--border);
+}
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+.founders-grid .person-card .portrait { aspect-ratio: 5 / 4; }
+.founders-grid .person-card .initials { font-size: clamp(4rem, 9vw, 6.5rem); margin-bottom: 22px; }
+.founders-grid .person-card .info { padding: 22px 28px 24px; }
+.founders-grid .person-card .name { font-size: 1.6rem; }
+@media (max-width: 720px) { .founders-grid { grid-template-columns: 1fr; padding-bottom: 50px; } }

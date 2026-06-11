@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Refract Ventures · Social template · Story / Reel cover · 1080×1920
+     Editable: headline (two lines) + tagline. Safe area kept clear of top/bottom UI. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <rect width="1080" height="1920" fill="#111010"/>
+  <rect width="1080" height="1920" fill="url(#g)"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#45abdd" stop-opacity="0.10"/>
+      <stop offset="40%" stop-color="#111010" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#d9465f" stop-opacity="0.10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Mark, top (inside safe area) -->
+  <svg x="96" y="320" width="128" height="99" viewBox="264 95 72 56">
+    <polygon fill="#d9465f" points="302.9 123.59 269.34 99.81 280.14 118.1 303.43 125.55 302.9 123.59"/>
+    <polygon fill="#faaf40" points="303.43 125.55 280.14 118.1 285.31 126.84 303.84 127.11 303.43 125.55"/>
+    <polygon fill="#45abdd" points="304.54 129.76 304.16 128.34 288.8 132.76 291.67 137.6 301.26 131.8 304.54 129.76"/>
+    <polygon fill="#a4ce4a" points="303.84 127.11 285.31 126.84 288.8 132.76 304.17 128.37 303.84 127.11"/>
+    <path fill="#fff" d="M316.5,106.11l-7.51,13.75-1.9,3.48-16.44-11.51,13.36-7.8,6.85-4,5.63,6.08ZM310.27,99.99l-10.49,6.12-9.43,5.51-16.23-11.63h36.16ZM301.05,146.27l-4.9-8.61,12.54-7.63.75,2.82.13.49-8.52,12.93ZM309.83,133.02l-.12-.46-.75-2.83s0,0,0,0l-1.62-6.11,9.4-17.21.42.56,6.91,9.21-14.23,16.85ZM324.74,105.23l-.61,10.47-7.18-9.58,8.05-5.37-.26,4.47s0,0,0,0ZM325.1,104.93l.25-4.32,6.1.48-6.36,3.84Z"/>
+  </svg>
+
+  <!-- Headline (edit) -->
+  <text x="96" y="940" font-family="'Cormorant Garamond', Georgia, serif" font-weight="500" font-size="132" fill="#e8e4df">Same hands.</text>
+  <text x="96" y="1080" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-weight="500" font-size="132" fill="#e8e4df">Different light.</text>
+
+  <!-- Accent rule -->
+  <g>
+    <rect x="96" y="1160" width="48" height="7" fill="#d9465f"/>
+    <rect x="152" y="1160" width="48" height="7" fill="#faaf40"/>
+    <rect x="208" y="1160" width="48" height="7" fill="#45abdd"/>
+    <rect x="264" y="1160" width="48" height="7" fill="#a4ce4a"/>
+  </g>
+
+  <!-- Tagline / handle (edit, inside bottom safe area) -->
+  <text x="96" y="1660" font-family="'Inter', sans-serif" font-weight="500" font-size="34" letter-spacing="3" fill="#a8a39e">REFRACTVENTURES.CO</text>
+</svg>

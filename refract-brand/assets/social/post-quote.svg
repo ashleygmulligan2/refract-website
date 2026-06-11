@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Refract Ventures · Social template · Quote post · 1080×1080
+     Editable: swap the two headline lines and the footer caption.
+     Type: Cormorant Garamond (headline), Inter (labels). -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <rect width="1080" height="1080" fill="#111010"/>
+  <rect x="48" y="48" width="984" height="984" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
+
+  <!-- Mark -->
+  <svg x="96" y="96" width="116" height="90" viewBox="264 95 72 56">
+    <polygon fill="#d9465f" points="302.9 123.59 269.34 99.81 280.14 118.1 303.43 125.55 302.9 123.59"/>
+    <polygon fill="#faaf40" points="303.43 125.55 280.14 118.1 285.31 126.84 303.84 127.11 303.43 125.55"/>
+    <polygon fill="#45abdd" points="304.54 129.76 304.16 128.34 288.8 132.76 291.67 137.6 301.26 131.8 304.54 129.76"/>
+    <polygon fill="#a4ce4a" points="303.84 127.11 285.31 126.84 288.8 132.76 304.17 128.37 303.84 127.11"/>
+    <path fill="#fff" d="M316.5,106.11l-7.51,13.75-1.9,3.48-16.44-11.51,13.36-7.8,6.85-4,5.63,6.08ZM310.27,99.99l-10.49,6.12-9.43,5.51-16.23-11.63h36.16ZM301.05,146.27l-4.9-8.61,12.54-7.63.75,2.82.13.49-8.52,12.93ZM309.83,133.02l-.12-.46-.75-2.83s0,0,0,0l-1.62-6.11,9.4-17.21.42.56,6.91,9.21-14.23,16.85ZM324.74,105.23l-.61,10.47-7.18-9.58,8.05-5.37-.26,4.47s0,0,0,0ZM325.1,104.93l.25-4.32,6.1.48-6.36,3.84Z"/>
+  </svg>
+
+  <!-- Headline (edit these two lines) -->
+  <text x="96" y="560" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-weight="500" font-size="118" fill="#e8e4df">Built piece by piece,</text>
+  <text x="96" y="688" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-weight="500" font-size="118" fill="#e8e4df">on weekends.</text>
+
+  <!-- Accent rule -->
+  <g>
+    <rect x="96" y="760" width="44" height="6" fill="#d9465f"/>
+    <rect x="148" y="760" width="44" height="6" fill="#faaf40"/>
+    <rect x="200" y="760" width="44" height="6" fill="#45abdd"/>
+    <rect x="252" y="760" width="44" height="6" fill="#a4ce4a"/>
+  </g>
+
+  <!-- Footer caption (edit) -->
+  <text x="96" y="952" font-family="'Inter', sans-serif" font-weight="500" font-size="28" letter-spacing="3" fill="#a8a39e">REFRACT VENTURES · NORTHWEST ARKANSAS</text>
+</svg>

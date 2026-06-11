@@ -1,0 +1,38 @@
+name: Deploy to HostPapa
+
+on:
+  push:
+    branches: [ main ]   # fires when a PR is merged into main
+
+# Prevent overlapping deploys if two merges land close together
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          # --- Non-sensitive: repository Variables (Settings > Secrets and variables > Actions > Variables) ---
+          server: ${{ vars.FTP_SERVER }}            # e.g. ftp.refractventures.co
+          server-dir: ${{ vars.FTP_SERVER_DIR }}    # e.g. public_html/
+          protocol: ${{ vars.FTP_PROTOCOL }}        # ftps (HostPapa supports it on most plans)
+
+          # --- Sensitive: repository Secrets (same screen, Secrets tab) ---
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          # Don't ship source/dev files to production (mirrors DEPLOY.md "DO NOT upload")
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.DS_Store
+            .gitignore
+            .github/**
+            _local-only/**
+            DEPLOY.md

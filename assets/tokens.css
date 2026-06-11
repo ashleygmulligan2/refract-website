@@ -1,0 +1,113 @@
+/* ─────────────────────────────────────────────────────────────────
+   Refract Ventures — Design Tokens
+   Single source of truth. Imported by index.html + every unit page.
+   ───────────────────────────────────────────────────────────────── */
+
+:root {
+  /* ─── Surfaces ─── */
+  --bg: #111010;
+  --bg-elevated: #1a1918;
+  --bg-card: #1e1d1c;
+  --surface: #252423;
+
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.16);
+
+  /* ─── Text ─── */
+  --text: #e8e4df;
+  --text-dim: #a8a39e;
+  --text-muted: #6f6c68;
+
+  /* ─── Prismatic palette (pulled from the bird logo) ─── */
+  --prism-red: #d9465f;
+  --prism-amber: #faaf40;
+  --prism-blue: #45abdd;
+  --prism-green: #a4ce4a;
+  --prism-navy: #001b55;
+
+  /* ─── Holding accents (canonical four-color system) ───
+     Each holding gets one prismatic color. Use these
+     anywhere you indicate a property's holding affiliation. */
+  --c-faye:         #d9465f;  /* Faye Social House — magenta */
+  --c-little-sugar: #a4ce4a;  /* Little Sugar — moss/green */
+  --c-ozark:        #faaf40;  /* Ozark Gothic — honey/amber */
+  --c-kontrast:     #45abdd;  /* Kontrast — slate / sky */
+
+  /* Soft (15% alpha) variants for fills, glows, halos */
+  --c-faye-soft:         rgba(217,70,95,0.15);
+  --c-little-sugar-soft: rgba(164,206,74,0.15);
+  --c-ozark-soft:        rgba(250,175,64,0.15);
+  --c-kontrast-soft:     rgba(69,171,221,0.15);
+
+  /* ─── Legacy aliases (homepage) ─── */
+  --hill-accent: var(--c-faye);
+  --sugar-accent: var(--c-little-sugar);
+  --gothic-accent: var(--c-ozark);
+  --lake-accent: var(--c-kontrast);
+
+  /* Default "accent" — overridden per-page. Each unit page
+     should set --accent to its holding color in its own
+     :root block AFTER importing this file. */
+  --accent: var(--c-faye);
+  --accent-soft: var(--c-faye-soft);
+
+  /* ─── Type ─── */
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ─── Radii ─── */
+  --gallery-radius: 14px;
+  --card-radius: 16px;
+  --pill-radius: 999px;
+
+  /* ─── Spacing scale (rhythm) ─── */
+  --pad-x: 3rem;
+  --gap-xl: 6rem;
+  --gap-lg: 4rem;
+  --gap-md: 2.5rem;
+  --gap-sm: 1.5rem;
+  --gap-xs: 0.75rem;
+
+  /* ─── Shadows ─── */
+  --shadow-card: 0 24px 60px -30px rgba(0,0,0,0.6);
+  --shadow-deep: 0 40px 100px -40px rgba(0,0,0,0.8);
+}
+
+/* Compact density override (used by Tweaks) */
+body[data-density="compact"] {
+  --gap-xl: 4rem;
+  --gap-lg: 2.75rem;
+  --gap-md: 1.75rem;
+  --gap-sm: 1rem;
+}
+
+/* Serif-off mode (used by Tweaks): route serif heads through sans */
+body[data-serif="off"] {
+  --serif: 'Inter', -apple-system, sans-serif;
+}
+body[data-serif="off"] h1,
+body[data-serif="off"] h2,
+body[data-serif="off"] h3,
+body[data-serif="off"] .serif {
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+/* ─── Universal reset ─── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+::selection { background: rgba(217, 70, 95, 0.3); color: #fff; }
+
+a { color: inherit; }
+img { display: block; max-width: 100%; }

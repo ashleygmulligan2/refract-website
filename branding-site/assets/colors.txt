@@ -1,0 +1,30 @@
+Refract Ventures — Color tokens
+================================
+
+NEUTRALS
+NAME              HEX        RGB                ROLE
+Carbon            #111010    17, 16, 16         Background · base
+Coal              #1A1918    26, 25, 24         Elevated surface
+Ash               #1E1D1C    30, 29, 28         Elevated surface 2
+Graphite          #252423    37, 36, 35         Elevated surface 3
+Bone              #E8E4DF    232, 228, 223      Primary text · paper
+Mist              #A8A39E    168, 163, 158      Secondary text
+Slate             #8A8580    138, 133, 128      Tertiary text · link rest
+Stone             #6F6C68    111, 108, 104      Meta · faint
+Granite           #5A5754     90,  87,  84      Quiet · disabled
+
+REFRACTED LIGHT (the mark's accent palette)
+NAME              HEX        RGB                ROLE
+Cardinal          #D9465F    217,  70,  95      Accent · primary highlight
+Saffron           #FAAF40    250, 175,  64      Accent · warmth
+Sky               #45ABDD     69, 171, 221      Accent · cool
+Meadow            #A4CE4A    164, 206,  74      Accent · grow
+
+DEEP
+Midnight Blue     #001B55      0,  27,  85      Quiet emphasis · serif callouts
+
+Accent washes (use as backgrounds at 8–15% opacity):
+  rgba(217, 70, 95, 0.10) · rgba(250, 175, 64, 0.09)
+  rgba(69, 171, 221, 0.09) · rgba(164, 206, 74, 0.08)
+
+Theme color (meta): #111010
